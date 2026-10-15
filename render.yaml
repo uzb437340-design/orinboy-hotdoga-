@@ -1,0 +1,12 @@
+
+services:
+  - type: worker
+    name: orinboy-hotdog-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: 8873554366:AAG_7ytiNMt8kI8UAE1ohZ4F9l4VjxgNHq0
+        sync: false
+      - key: 7485013824, 8897412091
+        sync: false
