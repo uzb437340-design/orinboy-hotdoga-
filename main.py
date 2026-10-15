@@ -538,6 +538,15 @@ def main():
     app = (
         Application.builder()
         .token(BOT_TOKEN)
+        # Telegram API sekin javob bersa, kutish vaqtini oshiramiz.
+        .connect_timeout(30)
+        .read_timeout(30)
+        .write_timeout(30)
+        .pool_timeout(30)
+        .get_updates_connect_timeout(30)
+        .get_updates_read_timeout(40)
+        .get_updates_write_timeout(30)
+        .get_updates_pool_timeout(30)
         .post_init(post_init)
         .build()
     )
